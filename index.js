@@ -11,7 +11,17 @@ const conn = mongoose.createConnection(url, {
     dbName: 'develop',
 });
 
-model.User = conn.model('user', userSchema);
+model.User = conn.model('user', new mongoose.Schema({
+  username: String,
+  firts_name: String,
+  second_name: String,
+  first_surname: String,
+  second_surname: String,
+  state: String,
+  gender: String,
+  birthday: String,
+  registration_date: String,
+}));
 
 const createUserService = async (user) => {
     const createUser = new model.User(user);
