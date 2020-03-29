@@ -1,0 +1,33 @@
+{
+  "name": "test_apollo_server_jest",
+  "version": "1.0.0",
+  "description": "Desarrollo de un entorno de pruebas para apollo server con jest",
+  "main": "index.js",
+  "scripts": {
+    "test": "RUNNER=test jest --runInBand"
+  },
+  "jest": {
+    "globalSetup": "./test/config/start.js",
+    "globalTeardown": "./test/config/stop.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JhonArlex/test_apollo_server_jest.git"
+  },
+  "author": "Jhon Arlex Ocampo Cifuentes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JhonArlex/test_apollo_server_jest/issues"
+  },
+  "homepage": "https://github.com/JhonArlex/test_apollo_server_jest#readme",
+  "dependencies": {
+    "apollo-server": "^2.11.0",
+    "graphql": "^14.6.0",
+    "mongoose": "^5.9.6"
+  },
+  "devDependencies": {
+    "apollo-boost": "^0.4.7",
+    "cross-fetch": "^3.0.4",
+    "jest": "^25.2.3"
+  }
+}
